@@ -1,0 +1,40 @@
+﻿/* RegOrLogStyle.css */
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #f0f0f0;
+}
+
+h2 {
+    text-align: center;
+}
+
+.RegButton {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.reg-button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: purple;
+    color: #fff;
+    cursor: pointer;
+}
+
+    .reg-button:hover {
+        background-color: blueviolet;
+    }
+
+
+.form-container {
+    margin-top: 20px;
+}

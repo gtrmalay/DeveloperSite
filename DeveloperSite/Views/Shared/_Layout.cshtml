@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игры от GTUens</title>
+    <link rel="stylesheet" href="~/css/Mainstyle.css">
+</head>
+<body>
+    <div class="container">
+        <main role="main" class="pb-3">
+        </main>
+    </div>
+    <header>
+        <img src="~/Source/Logo.jpg" alt="логотип" width="100">
+        <div class="nick-text"> Ник: @(ViewBag.UserName ?? "Гость")</div>
+    </header>
+    
+    <nav>
+        <a asp-controller="Home" asp-action="GamesList">Все игры разработчика</a>
+        <a asp-controller="Home" asp-action="PersonalArea" target="">Личный кабинет</a>
+        <a asp-controller="Home" asp-action="AboutDeveloper">О разработчике</a>
+    </nav>
+    <div class="action">
+        @RenderBody()
+    </div>
+
+    
+</body>
+</html>
+
+

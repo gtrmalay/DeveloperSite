@@ -1,0 +1,24 @@
+﻿/* AboutDeveloper.css */
+
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.gtens-text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+.devinfo-text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+}
+
+.kontactheader-text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}

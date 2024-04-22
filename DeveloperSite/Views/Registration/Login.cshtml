@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Вход";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Вход</title>
+    <link rel="stylesheet" href="~/css/Registration.css">
+</head>
+<body>
+    <form asp-controller="LogIn" asp-action="Login" method="post">
+        <h2>Введите свои данные</h2>
+        <div class="registration-strings"
+            <label>Email</label>
+            <input type="text" name="User_email" />
+            <label>Пароль</label>
+            <input type="text" name="User_password" />
+            <input type="submit" value="Войти" />
+        </div>
+    </form>
+</body>
+</html>
