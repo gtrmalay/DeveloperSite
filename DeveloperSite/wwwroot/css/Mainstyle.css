@@ -9,7 +9,7 @@ body {
 }
 
 header {
-    background-image: url(../Source/headerimage.png);
+    background-image: url(../Source/headerimage2.png);
     background-size: cover; /* тянем изображение на весь размер элемента */
     background-position: center; /* выравниваем картинку фона по центру */
     background-repeat: no-repeat; /* для того, чтобы фотка не повторялась */
@@ -56,11 +56,12 @@ nav {
 }
 
 .game-item {
-    width: 200px;
+    width: 90%;
     background-color: #f9f9f9;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
 }
 
 .developer-info {
@@ -73,3 +74,46 @@ nav {
 .nick-text {
     text-align: right;
 }
+
+input[type="submit"] {
+    background-color: purple;
+    color: #fff;
+    cursor: pointer;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+    input[type="submit"]:hover {
+        background-color: blueviolet;
+    }
+
+.togame-button {
+    background-color: green;
+    color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 40%;
+    height: 60%;
+}
+
+    .togame-button:hover {
+        background-color: blueviolet; 
+    }
+
+.togame {
+    text-align: center;
+}
+
+.gamelogo-img {
+    align: left;
+    display: inline-block;
+}
+
+.name-description {
+    display: inline-block;
+}
+

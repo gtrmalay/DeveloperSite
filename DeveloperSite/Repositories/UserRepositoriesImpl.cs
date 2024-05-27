@@ -13,23 +13,36 @@ namespace DeveloperSite.Repositories
         }
         public void SaveUser(User user)
         {
-            _context.Add(user);
+            if (user.User_id == 0) 
+            {
+                _context.Users.Add(user);
+            }
+            else
+            {
+                _context.Users.Update(user);
+            }
+
             _context.SaveChanges();
         }
 
-        User UserRepositories.GetUserByEmail(string email)
+        public  User GetUserByEmail(string email)
         {
-            User User = new User();
             try
             {
-                User = _context.Users.FirstOrDefault(x => x.User_email == email);
+                return _context.Users.FirstOrDefault(x => x.User_email == email);
 
             }
             catch (ArgumentNullException ex)
             {
                 Console.WriteLine($"Пользователь не найден: {ex.Message}");
+                return null;
             }
-            return User;
+        }
+
+        public void DeleteUser(User user)
+        {
+            _context.Users.Remove(user);
+            _context.SaveChanges();
         }
     }
 }

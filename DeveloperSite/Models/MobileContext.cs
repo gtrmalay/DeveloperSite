@@ -28,5 +28,7 @@ namespace DeveloperSite.Models
             modelBuilder.Entity<User>()
                .HasKey(d => d.User_id);
         }
+
+        
     }
 }

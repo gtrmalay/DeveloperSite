@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="~/css/Profil.css">
+    <link rel="stylesheet" href="/css/Profil.css">
     <title>Ваш профиль</title>
 </head>
 <body>
@@ -9,5 +9,42 @@
         <h3>Добро пожаловать, @ViewBag.UserName!</h3>
         <label>Ваша почта: @ViewBag.UserEmail</label>
     </div>
+    
+    <div class="profile-edit">
+        <h3>Изменить ник</h3>
+        <form asp-controller="Profile" asp-action="UpdateProfileName" method="post">
+            <label for="username">Новое имя пользователя:</label>
+            <input type="text" id="username" name="username" required>
+            <input type="submit" value="Сохранить изменения"><br><br>
+        </form>
+
+        <form asp-controller="Profile" asp-action="UpdateProfilePass" method="post">
+            <label for="username">Новый пароль:</label>
+            <input type="text" id="password" name="password" required>
+            <input type="submit" value="Сохранить изменения">
+        </form>
+            
+       
+    </div>
+
+    <div class="profile-delete">
+        <h3>Удалить профиль</h3>
+        <form asp-controller="Profile" asp-action="DeleteProfile" method="post">
+            <label for="confirmDelete">Введите ваш email для подтверждения:</label>
+            <input type="email" id="confirmDelete" name="confirmDelete"><br><br>
+            <input type="submit" value="Удалить профиль" onclick="return confirm('Вы уверены, что хотите удалить профиль? Это действие нельзя отменить.')">
+        </form>
+        <form asp-controller="Profile" asp-action="ExitProfile" method="post">
+            <input type="submit" value="Выйти" onclick="return confirm('Вы уверены, что хотите завершить сессию?')">
+        </form>
+    </div>
+
+    @if (ViewBag.ErrorDelEmail != null)
+    {
+        <script>
+            alert("@Html.Raw(ViewBag.ErrorDelEmail)");
+        </script>
+    }
 </body>
 </html>
+

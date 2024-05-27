@@ -17,9 +17,9 @@
     </header>
     
     <nav>
-        <a asp-controller="Home" asp-action="GamesList">Все игры разработчика</a>
+        <a asp-controller="Games" asp-action="GamesList">Все игры разработчика</a>
         <a asp-controller="Home" asp-action="PersonalArea" target="">Личный кабинет</a>
-        <a asp-controller="Home" asp-action="AboutDeveloper">О разработчике</a>
+        <a asp-controller="AboutDeveloper" asp-action="AboutDeveloper">О разработчике</a>
     </nav>
     <div class="action">
         @RenderBody()

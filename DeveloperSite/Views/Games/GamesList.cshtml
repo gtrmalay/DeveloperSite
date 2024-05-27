@@ -1,0 +1,42 @@
+﻿@model IEnumerable<DeveloperSite.Models.Game>
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игры от GTUens</title>
+    <link rel="stylesheet" href="~/css/Mainstyle.css">
+</head>
+<body>
+    <div class="container">
+        <main role="main" class="pb-3">
+            <form asp-controller="Home" asp-action="Index" method="post">
+                <input type="submit" class="back-from-games-button" value="Вернуться" />
+            </form>
+            <h2>Все игры разработчика</h2>
+            @foreach (var game in Model)
+            {
+                <section>
+                    <div class="game-list">
+                        <div class="game-item">
+                            <img src="~/Source/gameslogo/@game.Img" width="100" alt="Game Image"></img>
+                            <div class="name-description">
+                                <h3>@game.Game_name</h3>
+                                <p>@game.Game_description</p>
+                            </div>
+                            <form method="get" action="@(Url.Action("ToGamePage", "Games", new { id = game.Game_id }))" target="_blank">
+                                <div class="togame">
+                                    <button class="togame-button" type="submit">Подробнее</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            }
+        </main>
+    </div>
+</body>
+</html>

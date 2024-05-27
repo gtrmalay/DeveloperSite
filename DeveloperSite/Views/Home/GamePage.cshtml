@@ -1,0 +1,26 @@
+﻿@{
+    Layout = null; 
+}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница игры</title>
+    <link rel="stylesheet" href="/css/GamePageStyle.css">
+</head>
+<body>
+    <div class="game-container">
+        <img src="~/Source/gameslogo/@Model.Img" alt="Иконка игры" class="game-icon">
+        <h1>@Model.Game_name</h1>
+        <p class="game-description">
+            @Model.Game_description
+        </p>
+        <a href="ссылка будет здесь" class="download-button" download>Скачать игру</a>
+    </div>
+    <div class="comment-container">
+        <textarea placeholder="Оставьте ваш комментарий здесь..."></textarea>
+        <button class="comment-save">Отправить</button>
+    </div>
+</body>
+</html>

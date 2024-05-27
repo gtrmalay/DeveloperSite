@@ -1,4 +1,5 @@
 ﻿using DeveloperSite.Models;
+using DeveloperSite.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 namespace DeveloperSite
@@ -19,13 +20,17 @@ namespace DeveloperSite
             services.AddMvc();
             services.AddSession(options =>
             {
-                options.IdleTimeout = TimeSpan.FromMinutes(30); // Установите таймаут сессии по вашему усмотрению
+                options.IdleTimeout = TimeSpan.FromMinutes(30);
             });
+
+            // Регистрация UserRepositoriesImpl
+            services.AddScoped<UserRepositoriesImpl>();
+            services.AddScoped<GameRepositories>();
+
         }
 
         public void Configure(WebApplication app, IWebHostEnvironment env, IServiceProvider serviceProvider)
         {
-
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -40,10 +45,8 @@ namespace DeveloperSite
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
-                name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
-
-
+                    name: "default",
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
             });
 
             app.UseHttpsRedirection();

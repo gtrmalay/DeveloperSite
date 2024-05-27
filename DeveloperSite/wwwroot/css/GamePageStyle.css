@@ -1,0 +1,90 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение */
+    align-items: center;
+    min-height: 100vh; /* Учет высоты содержимого страницы */
+}
+
+.game-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Увеличенная тень блока */
+    padding: 20px;
+    margin-top: 20px;
+    max-width: 90%; /* Измененная ширина контейнера */
+    text-align: center;
+    margin-bottom: 20px; /* Отступ снизу для отделения от других элементов */
+}
+
+.game-icon {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.game-description {
+    margin: 20px 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.download-button {
+    display: inline-block;
+    background-color: green;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+    .download-button:hover {
+        background-color: blueviolet;
+    }   
+
+.comment-container {
+    width: 90%;
+    max-width: 90%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+textarea {
+    width: 90%;
+    height: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid black;
+    font-size: 16px;
+    resize: vertical;
+}
+
+.comment-save {
+    align-self: flex-end;
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 1px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 12px;
+    transition: background-color 0.3s;
+    margin-top: 5px;
+}
+
+    .comment-save:hover {
+        background-color: #0056b3;
+    }

@@ -8,8 +8,14 @@
     <link rel="stylesheet" href="~/css/Registration.css">
 </head>
 <body>
-    <script>
-        alert("Введены некорректные данные!");
-    </script>
+    <form id="errorForm" asp-controller="Error" asp-action="Error" method="post">
+        <script>
+            alert("Введены некорректные данные!");
+
+            window.onload = function () {
+                document.getElementById("errorForm").submit();
+            };
+        </script>
+    </form>
 </body>
 </html>

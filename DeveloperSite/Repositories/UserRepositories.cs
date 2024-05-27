@@ -7,5 +7,7 @@ namespace DeveloperSite.Repositories
     {
         User GetUserByEmail(string email);
         void SaveUser(User user);
+
+        public void DeleteUser(User user);
     }
 }
